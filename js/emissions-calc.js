@@ -74,5 +74,19 @@ $('#submitButton').on('click', function(e) {;
 
 })
 
+function embedClick() {
+    jQuery('#calc-embed-button').click(function() {
+        jQuery('.calc-embed-code').css('display', 'block');
+    })
+
+    jQuery(document).mouseup(function (e) { 
+        if (jQuery(e.target).closest("#calc-embed-code").length 
+                    === 0) { 
+            jQuery("#calc-embed-code").css('display', 'none');  
+        } 
+    });
+}
+
+$(embedClick);
 $(ddButton);
 $(showSelection);

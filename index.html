@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="Stylesheet" type="text/css" href="css/emissions-calc.css">
+    <title>Emissions Calculator</title>
+</head>
+<body>
+    <section role="region" class="emissions-calc-section">
+        <div class="emissions-calc-container">
+            <h2>Car Emissions Calculator</h2>
+            <p class="calc-directions">Fill out the followsing information to calculate your vehicle's carbon footprint</p>
+
+            <div class="emissions-calc-form">
+                <form action="">
+                    <fieldset>
+                        <legend>Car Emissions Calculator</legend>
+                        <p> 
+                            <img src="images/Miles-traveled-icon.png">
+                            <label for="miles">Miles Traveled</label>
+                            <input type="number" name="miles" id="miles" value="000">
+                        </p>
+                        <p>
+                            <img src="images/Vehicle-MPG-icon.png">
+                            <label for="mpg">Vehicle MPG</label>
+                            <input type="number" name="mpg" id="mpg" value="000">                        </p>
+                            <div class="calc-dropdown">
+                                <img src="images/Fuel-type-icon.png">
+                                <label for="fuel">Fuel Type</label>
+                                <div class="dd-container-outer">
+                                    <button class="calc-dropdown-button" id="fuel"><span class="fuel-name" value=""></span><img src="images\Dropdown-arrow.png"></button>
+                                    <ul class="calc-dropdown-content" id="dropdownContent">
+                                        <li><a class="dropdown-item gas" href="#" data-name="Gasoline">Gasoline</a></li>
+                                        <li><a class="dropdown-item" href="#" data-name="Diesel">Diesel</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="emissions-calc-results-container">
+                <button class="calc-submit-button" id="submitButton">Submit</button>
+                <p class="emissions-calc-result"><span id="formResult"></span> CO2e</p>
+            </div>
+            <button id="averages">Show Average Emissions</button>
+        </div>
+    </section>
+
+    <div class="fuel-calc-bottom-section">
+        <div class="fuel-calc-bottom-text">
+            <p class="bold-source-info">Source information can be found at:</p>
+            <p class="a-container"><a target="_blank"
+                    href="https://thesimpledollar.com/insurance/auto/car-emissions-calculator">https://thesimpledollar.com/insurance/auto/car-emissions-calculator</a>
+            </p>
+            <button id="calc-embed-button" class="calc-embed-button">Embed on your site</button>
+        </div>
+        <img class="sd-logo" src="images/TSD-logo-white.png" alt="The Simple Dollar logo">
+    </div>
+
+    <div id="calc-embed-code" class="calc-embed-code">
+        <xmp>
+        <iframe 
+            src="https://siege-media.github.io/simple-dollar-fuel-calc" 
+            scrolling="yes" 
+            frameBorder="0" 
+            style=" width: 100%; height: 1005px; overflow: hidden; display: block; margin-right: auto; margin-left: auto;">
+        </iframe>
+        </xmp>    
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/emissions-calc.js"></script>
+</body>
+</html>
